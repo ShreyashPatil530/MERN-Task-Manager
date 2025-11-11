@@ -166,13 +166,6 @@ MERN-Task-Manager/
 
 ---
 
-## 🖼️ Screenshots
-
-![Client Folder Structure](https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/client-app.png)
-![Server Folder Structure](https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/server-app.png)
-![App Demo](https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/app-demo.png)
-
----
 
 ## 📊 API Endpoints
 
