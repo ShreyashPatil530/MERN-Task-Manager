@@ -1,155 +1,258 @@
-# MERN Task Manager
+# 📋 MERN Task Manager
 
-![GitHub repo size](https://img.shields.io/github/repo-size/ShreyashPatil530/MERN-Task-Manager)
-![GitHub last commit](https://img.shields.io/github/last-commit/ShreyashPatil530/MERN-Task-Manager)
-![GitHub License](https://img.shields.io/github/license/ShreyashPatil530/MERN-Task-Manager)
-![Issues](https://img.shields.io/github/issues/ShreyashPatil530/MERN-Task-Manager)
-![Stars](https://img.shields.io/github/stars/ShreyashPatil530/MERN-Task-Manager?style=social)
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green?logo=node.js)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.x-black?logo=express)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)](https://www.mongodb.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Open Issues](https://img.shields.io/github/issues/ShreyashPatil530/MERN-Task-Manager?color=orange)](https://github.com/ShreyashPatil530/MERN-Task-Manager/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ShreyashPatil530/MERN-Task-Manager)](https://github.com/ShreyashPatil530/MERN-Task-Manager/commits/main)
+[![Stars](https://img.shields.io/github/stars/ShreyashPatil530/MERN-Task-Manager?style=social)](https://github.com/ShreyashPatil530/MERN-Task-Manager)
 
-A modern, robust **Task Manager App** using the MERN stack (MongoDB, Express.js, React + TypeScript, Node.js). Manage daily tasks effortlessly with authentication, clean UI, and full CRUD features.
-
----
-
-## 🚀 Features
-
-- User authentication (JWT)
-- Task add/edit/delete (CRUD)
-- Mark tasks complete/incomplete
-- Responsive, modern TypeScript React UI
-- RESTful API (Express/Node)
-- Secure credentials with .env
-- Organized folder structure
+> A modern, full-stack MERN (MongoDB, Express, React + TypeScript, Node.js) project for task management featuring authentication, CRUD operations, and a beautiful UI.
 
 ---
 
-## ⚡ Tech Stack
+## 📑 Table of Contents
 
-**Frontend:** React + TypeScript, CSS Modules  
-**Backend:** Node.js, Express.js, TypeScript  
-**Database:** MongoDB, Mongoose  
-**Auth:** JWT, bcryptjs  
-**Tooling:** VS Code, npm/yarn, Git & GitHub
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Screenshots](#-screenshots)
+- [API Endpoints](#-api-endpoints)
+- [Styling (CSS)](#-styling-css)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
+
+---
+
+## 🎯 Overview
+
+**MERN Task Manager** allows users to create, update, manage, and organize their daily tasks. With secure authentication and a modern, responsive interface built using React and TypeScript, this app showcases robust web dev practices and a clean codebase.
+
+**Key Highlights:**
+- 🔐 JWT-based authentication
+- ⚡ Responsive and fast UI with React & Vite
+- 🗃️ RESTful API powered by Node.js & Express
+- 🛡️ Typed front & backend (TypeScript)
+- 📦 MongoDB for scalable data storage
+- 🎨 Modular CSS styling with customization tips
+
+---
+
+## ✨ Features
+
+- **Authentication**:
+  - Register & login with secure JWT tokens
+  - Password hashing using bcryptjs
+- **Task Management**:
+  - Create, update, delete, view tasks
+  - Mark tasks as complete/incomplete
+  - Edit task title, description, status, and deadlines
+- **User Experience**:
+  - Modern, mobile-friendly UI
+  - Error handling, loading indicators, and form validation
+- **API**:
+  - Protected routes, clear REST conventions
+- **Type Safety**:
+  - All components, server routes, and models use TypeScript
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer         | Technology                          |
+|---------------|-------------------------------------|
+| Frontend      | React + TypeScript, Vite, CSS/SCSS  |
+| Backend       | Node.js, Express.js, TypeScript     |
+| Database      | MongoDB Atlas, Mongoose             |
+| Auth          | JWT, bcryptjs                       |
+| Tooling       | GitHub, VS Code, Postman, npm/yarn  |
 
 ---
 
 ## 📁 Project Structure
 
-```text
+```
 MERN-Task-Manager/
-|-- client-app/
-|   |-- src/components/
-|   |-- src/assets/
-|   |-- public/
-|   |-- ...
-|-- server-app/
-|   |-- src/
-|   |-- dist/
-|   |-- .env
-|   |-- ...
-|-- README.md
+│
+├── client-app/           # React + TypeScript Frontend
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── TaskForm.tsx
+│   │   │   └── TaskItem.tsx
+│   │   ├── assets/
+│   │   ├── App.tsx
+│   │   └── ...
+│   ├── package.json
+│   ├── vite.config.ts
+│   └── ...
+│
+├── server-app/           # Node.js + Express + TypeScript Backend
+│   ├── src/
+│   ├── dist/
+│   ├── .env
+│   ├── tsconfig.json
+│   └── ...
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🛠️ Quick Start
+## 🔧 Installation
 
-1. **Clone repository**
-   ```bash
-   git clone https://github.com/ShreyashPatil530/MERN-Task-Manager.git
-   cd MERN-Task-Manager
-   ```
-2. **Install dependencies**  
-   *(Repeat for both client-app & server-app)*
-   ```bash
-   cd client-app
-   npm install
-   cd ../server-app
-   npm install
-   ```
-3. **Set environment variables**  
-   In `server-app/.env`:
-   ```
-   MONGO_URI=your_mongodb_uri
-   JWT_SECRET=your_jwt_secret
-   PORT=5000
-   ```
-4. **Run backend & frontend**  
-   ```bash
-   # In server-app/
-   npm run dev
-   # In client-app/ (separate terminal)
-   npm run dev
-   ```
-5. Visit [http://localhost:5173](http://localhost:5173)
+### Prerequisites
+
+- Node.js 20+
+- npm or yarn
+- MongoDB Atlas or local MongoDB
+
+### Steps
+
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/ShreyashPatil530/MERN-Task-Manager.git
+    cd MERN-Task-Manager
+    ```
+
+2. **Install dependencies**
+
+    ```bash
+    cd client-app
+    npm install
+    cd ../server-app
+    npm install
+    ```
+
+3. **Set up environment variables (`server-app/.env`)**
+
+    ```env
+    MONGO_URI=your_mongodb_uri
+    JWT_SECRET=your_jwt_secret
+    PORT=5000
+    ```
+
+4. **Run the development servers**
+
+    - **Backend**
+        ```bash
+        cd server-app
+        npm run dev
+        ```
+    - **Frontend** (new terminal)
+        ```bash
+        cd client-app
+        npm run dev
+        ```
+
+5. **Open the app**:  
+   Visit [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🧩 Usage
+## 🚀 Usage
 
-- Sign up or log in  
-- Create a new task  
-- Edit, delete, mark as complete  
-- View all tasks
+- Register/login to access your task dashboard
+- Add a new task, mark completed, edit, or delete
+- Use the filter/search features to organize tasks
+- Responsive layout for mobile & desktop
 
 ---
 
 ## 🖼️ Screenshots
 
-<img src="https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/client-app/src/assets/app-demo.png" width="700"/>
+![Client Folder Structure](https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/client-app.png)
+![Server Folder Structure](https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/server-app.png)
+![App Demo](https://github.com/ShreyashPatil530/MERN-Task-Manager/blob/main/app-demo.png)
 
 ---
 
-## 🎨 CSS Styling Tips
+## 📊 API Endpoints
 
-- Use CSS Modules or styled-components for scoped, modular styles.
-- Prefer variables for themes (colors, spacing).
-- Use Flexbox/Grid for modern, responsive layouts.
-- Example CSS snippet for button:
+| Method | Endpoint            | Description               |
+|--------|---------------------|---------------------------|
+| POST   | `/api/auth/register`| Register user             |
+| POST   | `/api/auth/login`   | Login user                |
+| GET    | `/api/tasks`        | Get all tasks             |
+| POST   | `/api/tasks`        | Create new task           |
+| PUT    | `/api/tasks/:id`    | Edit a task               |
+| PATCH  | `/api/tasks/:id`    | Mark complete/incomplete  |
+| DELETE | `/api/tasks/:id`    | Delete a task             |
+
+---
+
+## 🎨 Styling (CSS)
+
+For a modern look:
+- Use flexbox/grid for layouts
+- Prefer CSS modules or styled-components
+- Animated transitions (`transition:`) for hover, pop-up, modal UIs
+- Example:
     ```css
-    .btn-primary {
-      background: linear-gradient(90deg,#06b,#24d6);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.7em 1.4em;
-      transition: background .3s;
-      cursor: pointer;
+    .task-card {
+      background: #f5f9ff;
+      border-radius: 10px;
+      padding: 1.2em 1.1em;
+      margin-bottom: 1.4em;
+      box-shadow: 0 4px 16px rgba(80,80,160,.08);
+      transition: box-shadow .2s;
     }
-    .btn-primary:hover {
-      background: linear-gradient(90deg,#24d6,#06b);
+    .task-card:hover {
+      box-shadow: 0 8px 28px rgba(80,80,160,.15);
+      background: #eaf4fd;
     }
     ```
 
 ---
 
-## 📬 Links
+## 🤝 Contributing
 
-- [See all code in this repo](https://github.com/ShreyashPatil530/MERN-Task-Manager)
+Contributions, feature requests, and bug reports welcome!
 
----
-
-## 🧑‍💻 Contributing
-
-```bash
-# Fork, clone, and create feature branch
-git checkout -b feature/my-task
-# Commit and open a pull request!
-```
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/FeatureName`)
+3. Commit changes (`git commit -m 'Add feature'`)
+4. Push (`git push origin feature/FeatureName`)
+5. Open a pull request
 
 ---
 
 ## 📄 License
 
-MIT
+MIT License - see [LICENSE](LICENSE)
 
 ---
 
-## 🙋 FAQ
+## 👤 Contact
 
-- **Where is main logic for tasks?**
-  - Frontend: `/client-app/src/components/`
-  - Backend: `/server-app/src/`
+**Shreyash Patil**  
+📧 Email: shreyashpatil530@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/yourprofile)  
+🐱 [GitHub](https://github.com/ShreyashPatil530/MERN-Task-Manager)  
+🌐 [Portfolio](https://shreyash-patil-portfolio1.netlify.app/)
 
 ---
 
-**Made with ❤️ by [ShreyashPatil530](https://github.com/ShreyashPatil530)**
+## 🙏 Acknowledgments
+
+- React, Node.js, TypeScript & MongoDB Documentation
+- Contributions from open-source community
+
+---
+
+## ⭐ Star this Repo
+
+If you found this project helpful, please consider starring it! ⭐
+
+---
+
+**Made with ❤️ by Shreyash Patil**
+
+*Last Updated: 11 November 2025*
