@@ -1,0 +1,31 @@
+{
+  "name": "mern-task-manager",
+  "version": "1.0.0",
+  "description": "MERN Stack Task Management System Backend API",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npx tsc && node ./dist/server.js",
+    "dev": "nodemon --exec \"node --loader ts-node/esm src/server.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shreyash patil",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3",
+    "nanoid": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^24.10.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
